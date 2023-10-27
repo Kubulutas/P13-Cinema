@@ -1,3 +1,4 @@
 Sinema salonunda, koltuk ve film seçimi ile beraber biletlerin toplam tutarlarının ekrana yansıltıldığı mini projem.
 
-![](p13-SinemaBilet.gif)
+![](p13sinema.gif)
+
