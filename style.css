@@ -1,0 +1,118 @@
+/* FORMAT  varsayılan değerlerin sıfırlanması*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+
+
+:root{
+  
+  --background-color: #292929;
+  --seat-color: #444451;
+  --text-color:#777;
+  --selected-color: #f6eb6f;
+  --reserved-color: #fff;
+  --info-background: rgba(0, 0, 0, 0.2);
+
+  --box-shadow: 0px 0px 25px 5px rgba(250, 250, 250, 1);
+
+  --transition: all 0.3s ease;
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Sutun'da alt alta dizilirler tüm elemanlar*/
+}
+
+.seatRow{
+    display: flex;
+    gap: 5px;
+}
+
+.screen{
+    width: 100%;
+    height: 100px;
+    margin: 20px 0; /* koltuklarla ekran arasına mesafe koyduk */
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+
+.screen img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.seat{
+    color: var(--seat-color);
+    margin: 5px; /* koltukların birbiriyle mesafesi açıldı*/
+    font-size: 25px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.seat:hover{
+    transform: scale(1.2);
+}
+
+.seat.reserved{
+    color: var(--reserved-color);
+}
+
+.seat:not(.reserved):hover { 
+    /* rezerve koltuk seçilemesin diye seçici olarak : not  */
+
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.seat.selected{
+    color: var(--selected-color);
+    background-color: transparent;
+}
+
+.info{
+    display: flex;
+    gap: 20px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.info li{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+
+}
+
+.movie-list{
+    margin: 20px 0;
+}
+
+.info li span{
+    color: var(--text-color)
+}
+
+
+
+.infoText{
+    color: var(--reserved-color);
+}
+
+.infoText span{
+    color: var(--selected-color);
+}
+
+.open{
+    display: block;
+}
+.hidden{
+    display: none;
+}
